@@ -1,8 +1,10 @@
 # Иванов Иван Иванович
 
-* Врач мануальной терапии
-* Член лиги проффесиональных мануальных терапевтов РФ
-* Медицинское образование 
-
-<img src="images/vrachfoto.jpg" alt="Описание" style="float: right; width: 200px; margin-left: 15px;">
-
+<div style="display: flex; align-items: center;">
+  <div>
+    <p>Врач мануальной терапии</p>
+    <p>Член лиги профессиональных мануальных терапевтов РФ</p>
+    <p>Медицинское образование</p>
+  </div>
+  <img src="path/to/image.jpg" alt="Описание картинки" style="margin-left: 20px; max-width: 100px;">
+</div>

@@ -4,4 +4,5 @@
 * Член лиги проффесиональных мануальных терапевтов РФ
 * Медицинское образование 
 
+<img src="images/vrachfoto.jpg" alt="Описание" style="float: right; width: 200px; margin-left: 15px;">
 

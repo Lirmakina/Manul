@@ -2,9 +2,11 @@
 
 <div style="display: flex; align-items: center;">
   <div>
-    <p>Врач мануальной терапии</p>
-    <p>Член лиги профессиональных мануальных терапевтов РФ</p>
-    <p>Медицинское образование</p>
+    <ul>
+      <li>Врач мануальной терапии</li>
+      <li>Член лиги профессиональных мануальных терапевтов РФ</li>
+      <li>Медицинское образование</li>
+    </ul>
   </div>
-  <img src="path/to/vrachfoto.jpg" alt="Описание картинки" style="margin-left: 20px; max-width: 100px;">
+  <img src="images/vrachfoto.jpg" alt="Описание картинки" style="margin-left: 20px; max-width: 100px;">
 </div>

@@ -1,1 +1,3 @@
 site_name: Мануальная терапия
+theme:
+  name: material

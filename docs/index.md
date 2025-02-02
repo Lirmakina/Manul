@@ -6,5 +6,5 @@
     <p>Член лиги профессиональных мануальных терапевтов РФ</p>
     <p>Медицинское образование</p>
   </div>
-  <img src="path/to/image.jpg" alt="Описание картинки" style="margin-left: 20px; max-width: 100px;">
+  <img src="path/to/vrachfoto.jpg" alt="Описание картинки" style="margin-left: 20px; max-width: 100px;">
 </div>

@@ -1,32 +1,34 @@
-echo name: Deploy MkDocs site > deploy.yml
-echo on: >> deploy.yml
-echo "  push:" >> deploy.yml
-echo "    branches:" >> deploy.yml
-echo "      - master" >> deploy.yml
-echo jobs: >> deploy.yml
-echo "  build:" >> deploy.yml
-echo "    runs-on: ubuntu-latest" >> deploy.yml
-echo "" >> deploy.yml
-echo "    steps:" >> deploy.yml
-echo "    - name: Checkout code" >> deploy.yml
-echo "      uses: actions/checkout@v2" >> deploy.yml
-echo "" >> deploy.yml
-echo "    - name: Set up Python" >> deploy.yml
-echo "      uses: actions/setup-python@v2" >> deploy.yml
-echo "      with:" >> deploy.yml
-echo "        python-version: '3.8'" >> deploy.yml
-echo "" >> deploy.yml
-echo "    - name: Install dependencies" >> deploy.yml
-echo "      run: |" >> deploy.yml
-echo "        python -m pip install --upgrade pip" >> deploy.yml
-echo "        pip install mkdocs" >> deploy.yml
-echo "        pip install mkdocs-material" >> deploy.yml
-echo "" >> deploy.yml
-echo "    - name: Build the site" >> deploy.yml
-echo "      run: mkdocs build" >> deploy.yml
-echo "" >> deploy.yml
-echo "    - name: Deploy to GitHub Pages" >> deploy.yml
-echo "      uses: peaceiris/actions-gh-pages@v3" >> deploy.yml
-echo "      with:" >> deploy.yml
-echo "        deploy_token: \${{ secrets.MANUL_DEP }}" >> deploy.yml
-echo "        publish_dir: ./site" >> deploy.yml
+name: Deploy MkDocs site
+
+on:
+  push:
+    branches:
+      - master  # Или main, если у тебя основная ветка называется main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install mkdocs
+        pip install mkdocs-material
+
+    - name: Build the site
+      run: mkdocs build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_token: ${{ secrets.manul_dep }}
+        publish_dir: ./site
